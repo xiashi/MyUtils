@@ -2,9 +2,23 @@
 Android开发中常用的工具类集合
 
 # gradle使用方式
-```gradle
-compile 'along.com.library:library:1.0.0'
-```
+
+Step 1. Add the JitPack repository to your build file
+
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+
+
+Step 2. Add the dependency
+
+    dependencies {
+	        implementation 'com.github.xiashi:MyUtils:1.0.0'
+	}
+
 # 常用工具类
 ```
 使用示例:
