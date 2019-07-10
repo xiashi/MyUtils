@@ -1,6 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
-group = 'along.com.library'
+group = 'com.github.xiashi'
 
 android {
     compileSdkVersion 28
