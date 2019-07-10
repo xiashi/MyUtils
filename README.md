@@ -3,12 +3,12 @@ Android开发中常用的工具类集合
 
 # gradle使用方式
 ```gradle
-compile 'com.code19.library:library:0.1.4'
+compile 'along.com.library:library:1.0.0'
 ```
 # 常用工具类
 ```
 使用示例:
-AppUtils.getAppName(MainActivity.this,com.code19.androidcommon);
+AppUtils.getAppName(MainActivity.this,"along.com.myutils");
 ```
 
 ## library Module中的类：
