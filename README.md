@@ -162,6 +162,8 @@ AppUtils.getAppName(MainActivity.this,"along.com.myutils");
     * getDensity 获取得屏幕密度
     * getGoogleAccounts 获取google账号
 
+- FileUtils.java  文件工具类
+
 
 - FileUtil.java  文件工具类
     * closeIO 关闭IO流
