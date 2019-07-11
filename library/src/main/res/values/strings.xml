@@ -2,4 +2,8 @@
     <string name="app_name">Library</string>
     <string name="wechaterr">无法跳转到微信，请检查您是否安装了微信!</string>
     <string name="alipayerr">无法跳转到支付宝，请检查您是否安装了支付宝!</string>
+
+    <string name="dialog_cancel">取消</string>
+    <string name="dialog_comfirm">确定</string>
+    <string name="dialog_go_setting">去设置</string>
 </resources>

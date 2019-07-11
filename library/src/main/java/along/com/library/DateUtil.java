@@ -5,6 +5,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Locale;
 
 /**
  * 时间相关工具类
@@ -13,6 +14,29 @@ public class DateUtil {
     private static final SimpleDateFormat DATE_FORMAT_DATETIME = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
     private static final SimpleDateFormat DATE_FORMAT_DATE = new SimpleDateFormat("yyyy-MM-dd");
     private static final SimpleDateFormat DATE_FORMAT_TIME = new SimpleDateFormat("HH:mm:ss");
+
+    public static long formatTimeYMDHMS(String time) {
+        Date date;
+        try {
+            date = DATE_FORMAT_DATETIME.parse(time);
+            long millis = date.getTime();
+            return millis;
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
+
+    public static String getYMDHMSTime() {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmss", Locale.getDefault());
+        String str = "";
+        try {
+            str = sdf.format(System.currentTimeMillis());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return str;
+    }
 
     public static String formatDataTime(long date) {
         return DATE_FORMAT_DATETIME.format(new Date(date));

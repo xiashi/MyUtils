@@ -69,16 +69,6 @@ AppUtils.getAppName(MainActivity.this,"along.com.myutils");
     * sha1 字符串sha1值
     * sha1 文件hash校验
 
-
-- ToastUtil.java Toast统一管理类
-    * showShort(Context context, CharSequence message)
-    * showShort(Context context, int message)
-    * showLong(Context context, CharSequence message)
-    * showLong(Context context, int message)
-    * show(Context context, CharSequence message, int duration)
-    * show(Context context, int message, int duration)
-
-
 - MapUtil.java GPS坐标转换工具
     * 百度坐标（BD09）、国测局坐标（火星坐标，GCJ02）、和WGS84坐标系之间的转换的工具
     * bd09towgs84 百度坐标系(BD-09)转WGS坐标(百度坐标纬度,百度坐标经度),WGS84坐标数组
@@ -162,27 +152,6 @@ AppUtils.getAppName(MainActivity.this,"along.com.myutils");
     * getDensity 获取得屏幕密度
     * getGoogleAccounts 获取google账号
 
-- FileUtils.java  文件工具类
-
-
-- JsonUtil.java Json工具类(需要依赖Gson 2.0以上)
-    * toJson 对象转json
-    * fromJson json转对象
-    * mapToJson Map转为JSONObject
-    * collection2Json 集合转换为JSONArray
-    * object2Json Object对象转换为JSONArray
-    * string2JSONObject json字符串生成JSONObject对象
-
-- L.java 日志工具
-    * init 初始化日志开关和TAG(默认日志为开,TAG为"ghost")
-    * v VERBOSE
-    * d DEBUG
-    * i INFO
-    * w WARN
-    * e ERROR
-    * a ASSERT
-    * json 输出json
-    * xml 输出xml
 
 - NetUtil.java 网络工具
     * getNetworkType 获取网络类型
@@ -201,19 +170,6 @@ AppUtils.getAppName(MainActivity.this,"along.com.myutils");
     * hexString2binaryString 16->2
     * binaryString2hexString 2->16
     * addBinary 二进制相加
-
-
-- PreferencesUtil.java SharedPreferences工具
-    * putString
-    * putBoolean
-    * putInt
-    * putFloat
-    * putLong
-    * getString
-    * getBoolean
-    * getInt
-    * getFloat
-    * getLong
 
 - StringUtil.java 字符串工具
     * getChsAscii 汉字转成ASCII码
@@ -285,39 +241,6 @@ AppUtils.getAppName(MainActivity.this,"along.com.myutils");
     * isNumeric 是否数值型
     * testRegex 是否匹配正则
     * checkPostcode 匹配中国邮政编码
-
-
-```shell
-
-    /**
-     * 身份证校验
-     * <p>
-     * 根据〖中华人民共和国国家标准 GB 11643-1999〗中有关公民身份号码的规定,公民身份号码是特征组合码,由十七位数字本体码和一位数字校验码组成。
-     * 排列顺序从左至右依次为：六位数字地址码,八位数字出生日期码,三位数字顺序码和一位数字校验码。
-     * 地址码表示编码对象常住户口所在县(市、旗、区)的行政区划代码。
-     * 出生日期码表示编码对象出生的年、月、日,其中年份用四位数字表示,年、月、日之间不用分隔符。
-     * 顺序码表示同一地址码所标识的区域范围内,对同年、月、日出生的人员编定的顺序号。顺序码的奇数分给男性,偶数分给女性。
-     * 校验码是根据前面十七位数字码,按照ISO 7064:1983.MOD 11-2校验码计算出来的检验码。
-     * 出生日期计算方法。
-     * 15位的身份证编码首先把出生年扩展为4位,简单的就是增加一个19或18,这样就包含了所有1800-1999年出生的人;
-     * 2000年后出生的肯定都是18位的了没有这个烦恼,至于1800年前出生的,那啥那时应该还没身份证号这个东东,⊙﹏⊙b汗...
-     * 下面是正则表达式:
-     * 出生日期1800-2099  /(18|19|20)?\d{2}(0[1-9]|1[012])(0[1-9]|[12]\d|3[01])/
-     * 身份证正则表达式 /^[1-9]\d{5}((1[89]|20)\d{2})(0[1-9]|1[0-2])(0[1-9]|[12]\d|3[01])\d{3}[\dx]$/i
-     * 15位校验规则 6位地址编码+6位出生日期+3位顺序号
-     * 18位校验规则 6位地址编码+8位出生日期+3位顺序号+1位校验位
-     * 校验位规则     公式:∑(ai×Wi)(mod 11)……………………………………(1)
-     * 公式(1)中：
-     * i----表示号码字符从由至左包括校验码在内的位置序号;
-     * ai----表示第i位置上的号码字符值；
-     * Wi----示第i位置上的加权因子,其数值依据公式Wi=2^(n-1）(mod 11)计算得出。
-     * i 18 17 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1
-     * Wi 7 9 10 5 8 4 2 1 6 3 7 9 10 5 8 4 2 1
-     * </P>
-     *
-     */
-```
-
 
 
 # 这个库参考了众多网络的中的代码,在此对这些无私奉献的人致以最诚挚的感谢。
