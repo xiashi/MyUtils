@@ -23,6 +23,8 @@ import java.lang.reflect.Method;
 import java.util.List;
 import java.util.regex.Pattern;
 
+import along.com.library.io.FileUtils;
+
 import static along.com.library.SystemUtil.hexdigest;
 
 /**
@@ -408,18 +410,18 @@ public class AppUtil {
 
     @Deprecated
     public static void cleanCache(Context context) {
-        FileUtil.deleteFileByDirectory(context.getCacheDir());
+        FileUtils.deleteFileByDirectory(context.getCacheDir());
     }
 
     @Deprecated
     public static void cleanDatabases(Context context) {
         String filepath = String.format(String.format(context.getFilesDir().getParent() + File.separator + "%s", "databases"));
-        FileUtil.deleteFileByDirectory(new File(filepath));
+        FileUtils.deleteFileByDirectory(new File(filepath));
     }
 
     @Deprecated
     public static void cleanSharedPreference(Context context) {
         String filepath = String.format(String.format(context.getFilesDir().getParent() + File.separator + "%s", "shared_prefs"));
-        FileUtil.deleteFileByDirectory(new File(filepath));
+        FileUtils.deleteFileByDirectory(new File(filepath));
     }
 }

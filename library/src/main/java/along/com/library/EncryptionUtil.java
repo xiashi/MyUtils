@@ -10,6 +10,8 @@ import java.security.DigestInputStream;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
+import along.com.library.io.FileUtils;
+
 /**
  * 加密相关工具类
  */
@@ -172,7 +174,7 @@ public class EncryptionUtil {
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
-            FileUtil.closeIO(in);
+            FileUtils.closeIO(in);
         }
         return null;
     }

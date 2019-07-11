@@ -27,6 +27,8 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Random;
 
+import along.com.library.io.FileUtils;
+
 /**
  * 跳转界面工具类
  */
@@ -261,7 +263,7 @@ public final class SystemUtil {
     }
 
     public static void shareFile(Context ctx, String title, String filePath) {
-        FileUtil.shareFile(ctx, title, filePath);
+        FileUtils.shareFile(ctx, title, filePath);
     }
 
 

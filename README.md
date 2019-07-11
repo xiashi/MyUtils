@@ -165,37 +165,6 @@ AppUtils.getAppName(MainActivity.this,"along.com.myutils");
 - FileUtils.java  文件工具类
 
 
-- FileUtil.java  文件工具类
-    * closeIO 关闭IO流
-    * isFileExist 文件是否存在
-    * writeFile 将字符串写入到文件
-    * readFile 从文件中读取字符串
-    * readFile 从文件中读取字符串(可设置编码)
-    * copyFile 复制文件
-    * copyFileFast 快速复制
-    * shareFile 分享文件
-    * zip zip压缩
-    * unzip zip解压
-    * formatFileSize 格式化文件大小
-    * Stream2File 将输入流写入到文件
-    * createFolder 创建文件夹
-    * createFolder 创建文件夹(支持覆盖已存在的同名文件夹)
-    * getFileName 获取文件名
-    * getFileSize 获取文件大小
-    * rename 重名名文件\文件夹
-    * getFolderName 获取文件夹名称
-    * getFilesArray 获取文件夹下所有文件
-    * deleteFile 删除文件
-    * deleteFileByDirectory 删除目录下的所有文件
-    * openImage 打开图片
-    * openVideo 打开视频
-    * openURL 打开URL
-    * downloadFile 下载文件
-    * upgradeApp 通过APKURL升级应用
-    * isSDCardAvailable 是否挂在SDCard
-    * getAppExternalPath 获取应用在SDCard上的工作路径
-    * getExtraPath 获取SDCard上目录的路径
-
 - JsonUtil.java Json工具类(需要依赖Gson 2.0以上)
     * toJson 对象转json
     * fromJson json转对象
