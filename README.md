@@ -16,7 +16,7 @@ Step 1. Add the JitPack repository to your build file
 Step 2. Add the dependency
 
     dependencies {
-	        implementation 'com.github.xiashi:MyUtils:1.0.0'
+	        implementation 'com.github.xiashi:MyUtils:1.0.4'
 	}
 
 # 常用工具类
